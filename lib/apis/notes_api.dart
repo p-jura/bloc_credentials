@@ -9,3 +9,20 @@ abstract class NotesApiProtocol {
     required LoginHandle loginHandle,
   });
 }
+
+@immutable
+class NotesApi implements NotesApiProtocol {
+  const NotesApi._sharedInstance();
+
+  static const NotesApi _shared = NotesApi._sharedInstance();
+  factory NotesApi.instance() => _shared;
+
+  @override
+  Future<Iterable<Note>?> getNotes({
+    required LoginHandle loginHandle,
+  }) =>
+      Future.delayed(
+        const Duration(seconds: 2),
+        () => loginHandle == const LoginHandle.fooBar() ? mockNotes : null,
+      );
+}
