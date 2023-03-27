@@ -10,3 +10,4 @@ const enterYourPasswordHere = 'Enter Your password here...';
 const enterYourEmailHere = 'Enter Your email here...';
 const ok = 'ok';
 const login = 'Log in';
+const homePage = 'Home page';

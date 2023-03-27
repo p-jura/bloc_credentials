@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 class PasswordTextField extends StatelessWidget {
   const PasswordTextField({
     super.key,
-    required this.emailController,
+    required this.passwordController,
   });
 
-  final TextEditingController emailController;
+  final TextEditingController passwordController;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      controller: emailController,
+      controller: passwordController,
       obscureText: true,
       obscuringCharacter: '❌',
       autocorrect: false,
